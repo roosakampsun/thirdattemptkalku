@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:kalkulaator/shared/menu.dart';
 
 
 
@@ -24,7 +25,7 @@ class _Konverter1AppState extends State<Konverter1App> {
   );
 
   final TextStyle resultStyle = TextStyle(
-    color: Colors.indigo,
+
     fontSize: 25.0,
     fontWeight: FontWeight.w700,
 
@@ -60,6 +61,9 @@ class _Konverter1AppState extends State<Konverter1App> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MenuDrawer(),
+      appBar: new AppBar(title: Text('Konverter')),
+
       body: SingleChildScrollView( // kasutatud parameetrit, mis eksisteerib
       child: Padding(
         padding: const EdgeInsets.all(15.0),
