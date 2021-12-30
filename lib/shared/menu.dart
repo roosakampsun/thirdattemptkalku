@@ -26,7 +26,7 @@ class MenuDrawer extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.greenAccent,
               ),
-              child: Text('Kalkulaatorid'),
+              child: Text('Rakendused'),
             ),
             ListTile(
               title: const Text('Kalkulaator'),
@@ -44,6 +44,12 @@ class MenuDrawer extends StatelessWidget {
               title: const Text('Bmi Kalkulaator'),
               onTap: () {
                 Navigator.pushReplacementNamed(context, routes.bmikalkulaator);
+              },
+            ),
+            ListTile(
+              title: const Text('Retseptid'),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, routes.retseptid);
               },
             ),
           ],
