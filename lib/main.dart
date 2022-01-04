@@ -11,9 +11,9 @@ import 'package:kalkulaator/controllers/routes.dart';
 import 'package:kalkulaator/view/bmi_calculator.dart';
 
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await FirebaseCoreApi.init();
+void main()  {
+  //WidgetsFlutterBinding.ensureInitialized();
+  //await FirebaseCoreApi.init();
   //await Firebase.initializeApp(); // siit tuleb alati global package kaasa
   runApp(const MyApp());
 }
