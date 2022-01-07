@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kalkulaator/screen/first_screen.dart';
-import 'package:kalkulaator/screen/recipe_screen.dart';
+import 'package:kalkulaator/screen/bored_screen.dart';
 import 'package:kalkulaator/view/Kalkulaator2.dart';
 import 'package:kalkulaator/view/Konverter1.dart';
 
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
              routes.kalkulaator:(context) => Kalkulaator2(),
            routes.konverter:(context) => Konverter1App(),
            routes.bmikalkulaator:(context) => BmiKalkulaator(),
-           routes.retseptid:(context) => RecipeScreen(),
+           routes.igavusepeletaja:(context) => RecipeScreen(),
 
 
          }

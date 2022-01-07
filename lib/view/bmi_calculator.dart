@@ -28,6 +28,7 @@ class BmiKalkulaatorState extends State<BmiKalkulaator> {
   late List<bool> isSelected;
   String heightMessage = '';
   String weightMessage = '';
+
   @override
   void initState() {
     isSelected = [isMetric, isImperial];
@@ -75,7 +76,7 @@ class BmiKalkulaatorState extends State<BmiKalkulaator> {
     textStyle: TextStyle(fontSize: fontSize
     )),
     ),
-         // child: Text('BMI kalkulaator', style: TextStyle(fontSize: fontSize)),
+
 
 
         Text(result, style: TextStyle(fontSize: fontSize)),

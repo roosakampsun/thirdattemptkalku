@@ -47,9 +47,9 @@ class MenuDrawer extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Retseptid'),
+              title: const Text('Igavusepeletaja'),
               onTap: () {
-                Navigator.pushReplacementNamed(context, routes.retseptid);
+                Navigator.pushReplacementNamed(context, routes.igavusepeletaja);
               },
             ),
           ],
