@@ -21,7 +21,10 @@ class RecipeScreenState extends State<RecipeScreen> {
   void initState() {
     super.initState();
     futureIdea = getNewIdea();
+
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +71,7 @@ class RecipeScreenState extends State<RecipeScreen> {
                       });
                     },
                     child: Text('Lae uus idee')),
+
               ],
             ),
           ],

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:kalkulaator/screen/favourites.dart';
 import 'package:kalkulaator/screen/first_screen.dart';
 import 'package:kalkulaator/screen/bored_screen.dart';
 import 'package:kalkulaator/view/Kalkulaator2.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
            routes.konverter:(context) => Konverter1App(),
            routes.bmikalkulaator:(context) => BmiKalkulaator(),
            routes.igavusepeletaja:(context) => RecipeScreen(),
+           routes.favourites:(context) => FavouritesPage(),
 
 
          }
