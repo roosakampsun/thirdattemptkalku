@@ -1,44 +1,67 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:kalkulaator/shared/menu.dart';
 
 class FavouritesPage extends StatefulWidget {
   const FavouritesPage({Key? key}) : super(key: key);
   static const String routeName = '/favourites';
+
   @override
   _FavouritesPageState createState() => _FavouritesPageState();
 }
 
 class _FavouritesPageState extends State<FavouritesPage> {
-  
+  final Future<QuerySnapshot> ideas =
+  FirebaseFirestore.instance.collection('lemmikud').get();
 
   @override
   Widget build(BuildContext context) {
-    var controller;
     return Scaffold(
-      appBar: AppBar(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Center(
-              child: FutureBuilder<List<String>?>(
-                future: controller.getStringList("activity"),
-                builder: (BuildContext context, AsyncSnapshot<List<String>?> snapshot) {
-                  List<Widget> rows = [];
-                  if (snapshot.hasData) {
-                    int counter = 1;
-                    rows = snapshot.data!.map((activity) {
-                      String text = counter.toString() + ". " + activity;
-                      counter++;
-                      return Text(text);
-                    }).toList();
-                  }
+      drawer: MenuDrawer(),
+      appBar: AppBar(
+        title: Text('Lemmikud ideed'),
+      ),
+      body: Container(
+        child: Stack(
+          children: [
 
-                  return Column(
-                    children: rows,
+            Container(
+              child: FutureBuilder<QuerySnapshot>(
+                future: ideas,
+                builder: (BuildContext context,
+                    AsyncSnapshot<QuerySnapshot> snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Text('Loading');
+                  }
+                  final data = snapshot.requireData;
+                  return ListView.builder(
+                    itemCount: data.size,
+                    itemBuilder: (context, index) {
+                      return SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(15),
+                              child: Text(
+                                '${data.docs[index]['activity']}',
+                                style: TextStyle(
+                                    fontSize: 25.0,
+                                    fontWeight: FontWeight.bold,
+                                    backgroundColor: Colors.white.withOpacity(0.8)),
+
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                   );
                 },
-              )),
+              ),
+            ),
+          ],
         ),
       ),
     );

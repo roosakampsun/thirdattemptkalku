@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kalkulaator/screen/first_screen.dart';
-import 'package:kalkulaator/view/Kalkulaator2.dart';
-import 'package:kalkulaator/view/Konverter1.dart';
 import 'package:kalkulaator/controllers/routes.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -50,6 +47,12 @@ class MenuDrawer extends StatelessWidget {
               title: const Text('Igavusepeletaja'),
               onTap: () {
                 Navigator.pushReplacementNamed(context, routes.igavusepeletaja);
+              },
+            ),
+            ListTile(
+              title: const Text('Salvestatud'),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, routes.favourites);
               },
             ),
           ],
