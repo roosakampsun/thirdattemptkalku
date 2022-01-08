@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "839561628333",
+    "project_id": "firstone-1f80b",
+    "storage_bucket": "firstone-1f80b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839561628333:android:3de9646ef378172e629424",
+        "android_client_info": {
+          "package_name": "com.example.kalkulaator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839561628333-5ca5m8b52lco81ejkpgqtgfoivlls46a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFjYq8AQIgC90x6FMxqe2G77WVJcfeQkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839561628333-5ca5m8b52lco81ejkpgqtgfoivlls46a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
